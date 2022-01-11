@@ -1,4 +1,4 @@
-_windows_build_file_content = """
+_build_file_content = """
 alias(
     name = "doxygen",
     visibility = ["//visibility:public"],
@@ -7,25 +7,25 @@ alias(
 """
 
 _known_archives = {
-    "1.8.19": {
+    "1.9.3": {
         "windows64": struct(
-            urls = ["https://doxygen.nl/files/doxygen-1.8.19.windows.x64.bin.zip"],
+            urls = ["http://pan.aqrose.com/seafhttp/files/f835b9ca-d8b0-40f8-ba35-30b549edb2b6/rules_doxygen-master.zip"],
             strip_prefix = "",
-            sha256 = "36beda917f395b4160777f3689e86d6b7e4e51f6f9432413db8fe3b9279e6082",
-            build_file_content = _windows_build_file_content,
+            sha256 = "575b1a27cb907675d24f2c348a4d95d9cdd6a2000f6a8d8bfc4c3a20b2e120f5",
+            build_file_content = _build_file_content,
         ),
-        "windows32": struct(
-            urls = ["https://doxygen.nl/files/doxygen-1.8.19.windows.bin.zip"],
+        "linux64": struct(
+            urls = ["http://pan.aqrose.com/seafhttp/files/14dbaf6d-7df1-4958-91d9-8905381b1664/doxygen-1.9.3.linux.bin.tar.gz"],
             strip_prefix = "",
-            sha256 = "",
-            build_file_content = _windows_build_file_content,
+            sha256 = "e4db0a99e4f078ba4d8a590b6e3f6fdc2ff9207c50b1308a072be965e70f4141",
+            build_file_content = _build_file_content,
         ),
     },
 }
 
 def _os_key(os):
     if os.name.find("windows") != -1:
-        return "windows32"
+        return "windows64"
     elif os.name.find("linux") != -1:
         return "linux64"
     return os.name
@@ -53,7 +53,7 @@ doxygen_repository = repository_rule(
     implementation = _doxygen_repository,
     attrs = {
         "doxygen_version": attr.string(
-            default = "1.8.19",
+            default = "1.9.3",
             values = _known_archives.keys(),
         ),
     },
