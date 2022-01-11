@@ -1,6 +1,6 @@
 # rules_doxygen
 
-Bazel rules for running doxygen. Experimental work in progress
+Bazel rules for running doxygen.
 
 ## Install
 
@@ -22,7 +22,8 @@ doxygen_repository(name = "doxygen")
 Run doxygen through bazel
 
 ```sh
-bazel run @doxygen//:doxygen -- -g
+bazel run @doxygen//:doxygen -g Doxyfile
+bazel run 
 ```
 
 ## License

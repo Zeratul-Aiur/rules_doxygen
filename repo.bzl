@@ -1,4 +1,3 @@
-
 _windows_build_file_content = """
 alias(
     name = "doxygen",
@@ -48,7 +47,7 @@ def _get_doxygen_archive(rctx):
 def _doxygen_repository(rctx):
     archive = _get_doxygen_archive(rctx)
     rctx.download_and_extract(archive.urls, output = rctx.attr.doxygen_version, stripPrefix = archive.strip_prefix, sha256 = archive.sha256)
-    rctx.file("BUILD.bazel", archive.build_file_content.format(DOXYGEN_VERSION=rctx.attr.doxygen_version), executable = False)
+    rctx.file("BUILD.bazel", archive.build_file_content.format(DOXYGEN_VERSION = rctx.attr.doxygen_version), executable = False)
 
 doxygen_repository = repository_rule(
     implementation = _doxygen_repository,
