@@ -9,13 +9,19 @@ alias(
 _known_archives = {
     "1.9.3": {
         "windows64": struct(
-            urls = ["http://pan.aqrose.com/seafhttp/files/f835b9ca-d8b0-40f8-ba35-30b549edb2b6/rules_doxygen-master.zip"],
+            urls = [
+                "https://cfhcable.dl.sourceforge.net/project/doxygen/rel-1.9.3/doxygen-1.9.3.windows.x64.bin.zip",
+                "http://pan.aqrose.com/f/c1973e6010394fc18a72/?dl=1",
+            ],
             strip_prefix = "",
             sha256 = "575b1a27cb907675d24f2c348a4d95d9cdd6a2000f6a8d8bfc4c3a20b2e120f5",
             build_file_content = _build_file_content,
         ),
         "linux64": struct(
-            urls = ["http://pan.aqrose.com/seafhttp/files/14dbaf6d-7df1-4958-91d9-8905381b1664/doxygen-1.9.3.linux.bin.tar.gz"],
+            urls = [
+                "https://cfhcable.dl.sourceforge.net/project/doxygen/rel-1.9.3/doxygen-1.9.3.linux.bin.tar.gz",
+                "http://pan.aqrose.com/f/79b37eb7db464a2a87ee/?dl=1",
+            ],
             strip_prefix = "",
             sha256 = "e4db0a99e4f078ba4d8a590b6e3f6fdc2ff9207c50b1308a072be965e70f4141",
             build_file_content = _build_file_content,
