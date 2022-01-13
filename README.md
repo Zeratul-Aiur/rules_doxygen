@@ -30,3 +30,7 @@ Adjust the settings in your Doxygen configuration file `Doxyfile`.Then run doxyg
 ```sh
 bazel run @doxygen//:doxygen Doxyfile
 ```
+
+## LICENSE
+
+MIT
