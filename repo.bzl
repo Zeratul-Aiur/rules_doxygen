@@ -26,7 +26,6 @@ _known_archives = {
         ),
         "linux64": struct(
             urls = [
-                "http://pan.aqrose.com/seafhttp/files/0f159b99-b129-401f-9020-036eb05b66d3/doxygen-1.9.3.linux.bin.tar.gz",
                 "https://cfhcable.dl.sourceforge.net/project/doxygen/rel-1.9.3/doxygen-1.9.3.linux.bin.tar.gz",
             ],
             strip_prefix = "doxygen-1.9.3/bin",
