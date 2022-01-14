@@ -1,8 +1,16 @@
-_build_file_content = """
+windows_build_file_content = """
 alias(
     name = "doxygen",
     visibility = ["//visibility:public"],
     actual = "{DOXYGEN_VERSION}/doxygen.exe",
+)
+"""
+
+linux_build_file_content = """
+alias(
+    name = "doxygen",
+    visibility = ["//visibility:public"],
+    actual = "{DOXYGEN_VERSION}/doxygen",
 )
 """
 
@@ -14,7 +22,7 @@ _known_archives = {
             ],
             strip_prefix = "",
             sha256 = "575b1a27cb907675d24f2c348a4d95d9cdd6a2000f6a8d8bfc4c3a20b2e120f5",
-            build_file_content = _build_file_content,
+            build_file_content = windows_build_file_content,
         ),
         "linux64": struct(
             urls = [
@@ -23,7 +31,7 @@ _known_archives = {
             ],
             strip_prefix = "doxygen-1.9.3/bin",
             sha256 = "e4db0a99e4f078ba4d8a590b6e3f6fdc2ff9207c50b1308a072be965e70f4141",
-            build_file_content = _build_file_content,
+            build_file_content = linux_build_file_content,
         ),
     },
 }
