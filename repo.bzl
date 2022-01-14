@@ -21,7 +21,7 @@ _known_archives = {
                 "http://pan.aqrose.com/seafhttp/files/0f159b99-b129-401f-9020-036eb05b66d3/doxygen-1.9.3.linux.bin.tar.gz",
                 "https://cfhcable.dl.sourceforge.net/project/doxygen/rel-1.9.3/doxygen-1.9.3.linux.bin.tar.gz",
             ],
-            strip_prefix = "",
+            strip_prefix = "doxygen-1.9.3/bin",
             sha256 = "e4db0a99e4f078ba4d8a590b6e3f6fdc2ff9207c50b1308a072be965e70f4141",
             build_file_content = _build_file_content,
         ),
