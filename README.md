@@ -22,13 +22,13 @@ doxygen_repository(name = "doxygen")
 Run doxygen through bazel to build `Doxyfile`.
 
 ```sh
-bazel run @doxygen//:doxygen -- -s -g Doxyfile
+bazel run @doxygen//:doxygen -- -g Doxyfile
 ```
 
 Adjust the settings in your Doxygen configuration file `Doxyfile`.Then run doxygen.
 
 ```sh
-bazel run @doxygen//:doxygen Doxyfile
+bazel run @doxygen//:doxygen -- Doxyfile
 ```
 
 ## LICENSE
